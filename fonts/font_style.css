@@ -1,0 +1,56 @@
+@font-face {
+    font-family: 'ArcherBold';
+    src: url('archer-bold.eot');
+    src: url('archer-bold.eot') format('embedded-opentype'),
+         url('archer-bold.woff2') format('woff2'),
+         url('archer-bold.woff') format('woff'),
+         url('archer-bold.ttf') format('truetype'),
+         url('archer-bold.svg#ArcherBold') format('svg');
+}
+
+@font-face {
+	font-family: 'Conv_Archer-Book-Pro';
+	src: url('Archer-Book-Pro.eot');
+	src: local('?'), url('Archer-Book-Pro.woff') format('woff'), url('Archer-Book-Pro.ttf') format('truetype'), url('Archer-Book-Pro.svg') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+
+@font-face {
+    font-family: 'wisdom_script_airegular';
+    src: url('Wisdom Script-webfont.eot');
+    src: url('Wisdom Script-webfont.eot?#iefix') format('embedded-opentype'),
+         url('Wisdom Script-webfont.woff2') format('woff2'),
+         url('Wisdom Script-webfont.woff') format('woff'),
+         url('Wisdom Script-webfont.ttf') format('truetype'),
+         url('Wisdom Script-webfont.svg#wisdom_script_airegular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+@font-face {
+    font-family: 'garda_emptyregular';
+    src: url('Sebastian Cabaj - Gardaempty-webfont.eot');
+    src: url('Sebastian Cabaj - Gardaempty-webfont.eot?#iefix') format('embedded-opentype'),
+         url('Sebastian Cabaj - Gardaempty-webfont.woff2') format('woff2'),
+         url('Sebastian Cabaj - Gardaempty-webfont.woff') format('woff'),
+         url('Sebastian Cabaj - Gardaempty-webfont.ttf') format('truetype'),
+         url('Sebastian Cabaj - Gardaempty-webfont.svg#garda_emptyregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+@font-face {
+    font-family: 'garda_fillerregular';
+    src: url('Sebastian Cabaj - Gardafiller-webfont.eot');
+    src: url('Sebastian Cabaj - Gardafiller-webfont.eot?#iefix') format('embedded-opentype'),
+         url('Sebastian Cabaj - Gardafiller-webfont.woff2') format('woff2'),
+         url('Sebastian Cabaj - Gardafiller-webfont.woff') format('woff'),
+         url('Sebastian Cabaj - Gardafiller-webfont.ttf') format('truetype'),
+         url('Sebastian Cabaj - Gardafiller-webfont.svg#garda_fillerregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}

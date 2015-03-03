@@ -1,0 +1,73 @@
+/* slides */
+
+html, body {
+	margin: 0;
+	padding: 0;
+	height: 999999px!important;
+}
+
+.slide, section {
+	min-height: 10vh;
+	transform: translate(0px, 0px);
+	-webkit-transform: translate(0px, 0px);
+	-moz-transform: translate(0px, 0px);
+	-o-transform: translate(0px, 0px);
+	-ms-transform: translate(0px, 0px);
+	transition: all .4s ease;
+	-webkit-transition: all .4s ease;
+	-moz-transition: all .4s ease;
+	-o-transition: all .4s ease;
+	position: fixed;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	box-shadow: 0 0 10px rgba(0,0,0, .5);
+	text-align: center;
+	font-size: 100vh;
+}
+
+
+/* offstage */
+
+.offstage-right {
+	transform: translate(100%, 0px);
+	-webkit-transform: translate(100%, 0px);
+	-moz-transform: translate(100%, 0px);
+	-o-transform: translate(100%, 0px);
+	-ms-transform: translate(100%, 0px);
+}
+
+.offstage-left {
+	transform: translate(-100%, 0px);
+	-webkit-transform: translate(-100%, 0px);
+	-moz-transform: translate(-100%, 0px);
+	-o-transform: translate(-100%, 0px);
+	-ms-transform: translate(-100%, 0px);
+}
+
+.offstage-bottom {
+	transform: translate(0px, 100%);
+	-webkit-transform: translate(0px, 100%);
+	-moz-transform: translate(0px, 100%);
+	-o-transform: translate(0px, 100%);
+	-ms-transform: translate(0px, 100%);
+}
+
+.offstage-top {
+	transform: translate(0px, -100%);
+	-webkit-transform: translate(0px, -100%);
+	-moz-transform: translate(0px, -100%);
+	-o-transform: translate(0px, -100%);
+	-ms-transform: translate(0px, -100%);
+}
+
+
+/* stages */
+#home .slide {
+	background: #ddd;
+}
+
+#about .slide {
+	background: #666;
+}
