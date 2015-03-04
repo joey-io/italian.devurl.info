@@ -1,7 +1,5 @@
 $(document).ready(function(){
 
-
-
     var height = ($('.slide').length+1)*$(window).height();
     var top =  $(window).scrollTop();
     var dir = 'up';
@@ -90,7 +88,11 @@ function doChange(tab_index){
 
     // Set it
     document.title = menu + ' | SPOLETO - My Italian Kitchen';
-    window.history.pushState('object or string', menu, url);
+
+    if ( window.location.pathname != url ) {
+        window.history.pushState('object or string', menu, url);
+    }
+
 }
 
 function preScroll(page){
@@ -104,7 +106,7 @@ function preScroll(page){
 
     $('body').attr('data-page', jQuery('.slide[data-url="/'+page+'"]').attr('tab-index'));
 
-    console.log(nt);
+    console.log(page);
 
     $('html, body').stop().animate({
         'scrollTop' : nt
