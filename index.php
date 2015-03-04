@@ -187,13 +187,118 @@
 </div>
 
 
-<div id="locations" class="slide offstage-bottom first last" tab-index="10" data-menu="Locations & Menu" data-url="/locations-and-menu.php"></div>
+<div id="locations" class="slide offstage-bottom first last" tab-index="10" data-menu="Locations & Menu" data-url="/locations-and-menu.php">
+	<div>
+		<hgroup>
+			<h2>
+				<div class="thin yellow">Our</div>
+				<div class="white">Locations</div>
+			</h2>
+		</hgroup>
+		<div id="locations-table">
+			<div class="location">
+				<div class="title">UCF</div>
+				<img src="img/UCF.jpg" />
+				<address>12101 University Blvd, Ste. 219<br/>Orlando, FL 32817</address>
+				<a href="tel:407-765-0830">407-765-0830</a>
+				<time>Monday - Sunday: 11am - 10pm</time>
+				<p></p>
+				<a href="/" class="button yellow">Get Directions</a>
+				<a href="/" class="button yellow">Menu</a>
+			</div>
+			<div class="location">
+				<div class="title">Florida Mall</div>
+				<img src="img/mall.jpg" />
+				<address>8001 S. Orange Blossom Trail<br/>Orlando, FL 32809</address>
+				<div class="soon yellow thin">Coming soon!</div>
+			</div>
+			<div class="location">
+				<div class="title">Florida Mall</div>
+				<img src="img/mall.jpg" />
+				<address>8001 S. Orange Blossom Trail<br/>Orlando, FL 32809</address>
+				<div class="soon yellow thin">Coming soon!</div>
+			</div>
+		</div>
+	</div>
+</div>
 
-<div id="lets-talk" class="slide offstage-bottom first last" tab-index="11" data-menu="Let's Talk" data-url="/contact-us.php"></div>
+<div id="lets-talk" class="slide offstage-bottom first last" tab-index="11" data-menu="Let's Talk" data-url="/contact-us.php">
+	<div class="noodle from-left fade-in delayed"></div>
+	<div class="panel panel-right from-right noodles">
+		<div>
+			<h2>
+				<div class="black">
+					<em>Let's</em>
+				</div>
+				<div class="yellow">Talk</div>
+			</h2>
+			<p>We’re keeping the lines of communication open to hear about your Spoleto experience and answer any questions you might have. We welcome comments and inquiries from our guests, vendors, media reps and community partners. Contact us today and you’ll hear back from us within the next 24 hours.</p>
+			<form>
+				<div class="form-field half">
+					<input type="text" placeholder="First" />
+					<label>Name</label>
+				</div>
+				<div class="form-field half">
+					<input type="text" placeholder="Last" />
+					<label>&nbsp;</label>
+				</div>
+				<div class="clearfix"></div>
+				<div class="form-field">
+					<input type="email" placeholder="yourname@email.com" />
+					<label>E-Mail</label>
+				</div>
+				<div class="form-field">
+					<select>
+						<option>Choose from the following...</option>
+					</select>
+					<label>Topic</label>
+				</div>
+				<div class="form-field">
+					<textarea></textarea>
+					<label>Message</label>
+				</div>
+				<div class="clearifx"></div>
+				<div class="half">
+					&nbsp;
+					<label>&nbsp;</label>
+				</div>
+				<div class="half">
+					<input type="submit" class="yellow" />
+				</div>
+				<div class="clearfix"></div>
+			</form>
+		</div>
+	</div>
+</div>
 
-<div id="family" class="slide offstage-bottom first last" tab-index="12" data-menu="Join Our Family" data-url="/careers.php"></div>
+<div id="family" class="slide offstage-bottom first last" tab-index="12" data-menu="Join Our Family" data-url="/careers.php">
+	<div class="panel from-left noodles">
+		<div>
+			<h2>
+				<div class="thin black">Join Our</div>
+				<div class="yellow">Family</div>
+			</h2>
+			<p>If you are interested in joining Orlando’s most exciting and interactive fresh fast casual Italian restaurant, we are looking for you! To be considered for our team please full out our online application and we’ll notify you when and where we will be holding interviews.</p>
+			<p class="text-right">
+				<a href="/" class="button yellow">Apply</a>
+			</p>
+		</div>
+	</div>
+</div>
 
-<div id="gift-card" class="slide offstage-bottom first last" tab-index="13" data-menu="Gift Cards" data-url="/gift-cards.php"></div>
+<div id="gift-card" class="slide offstage-bottom first last" tab-index="13" data-menu="Gift Cards" data-url="/gift-cards.php">
+	<div class="panel panel-right from-right noodles">
+		<div>
+			<h2>
+				<div class="black">Share<br/>the<em class="yellow">Amore</em></div>
+			</h2>
+			<p>If you are interested in joining Orlando’s most exciting and interactive fresh fast casual Italian restaurant, we are looking for you! To be considered for our team please full out our online application and we’ll notify you when and where we will be holding interviews.</p>
+			<p><a href="/" class="button yellow">Register Card</a></p>
+			<p><a href="/" class="button yellow">Check Balance</a></p>
+			<p><a href="/" class="button yellow">FAQ</a></p>
+		</div>
+	</div>
+</div>
 
 
 <?php include 'footer.php'; ?>

@@ -419,11 +419,81 @@ a {
 #locations {
 	background: url('../img/locations.jpg') center center no-repeat;
 	background-size: cover;
+	hgroup {
+		display: block;
+		text-align: center;
+	}
+	> div {
+		position: absolute;
+		width: 100%;
+		top: 50%;
+		transform: translateY(-50%);
+		-webkit-transform: translateY(-50%);
+		-moz-transform: translateY(-50%);
+		-ms-transform: translateY(-50%);
+	}
+}
+
+#locations-table {
+	padding-top: .5em;
+	width: 80%;
+	margin: 0 auto;
+	&:after {
+		display: table;
+		clear: both;
+		content: '';
+	}
+}
+
+.location {
+	text-align: center;
+	width: 33.33%;
+	float: left;
+	color: #fff;
+	box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	-ms-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	padding: 2em 3em;
+	font-family: 'Conv_Archer-Book-Pro';
+	img {
+		width: 100%;
+		box-shadow: .5em .5em 1em #000;
+		margin-bottom: .25em;
+	}
+	.title {
+		color: #000;
+	}
+	address, time, a[href*="tel"] {
+		font-style: normal;
+		display: block;
+		text-decoration: none;
+		padding-left: 1em;
+		padding-right: 1em;
+	}
+	time {
+		padding-top: .25em;
+	}
+	.title {
+		font-size: 1.5em;
+		font-family: 'garda_emptyregular';
+	}
+	.soon {
+		font-size: 1.5em;
+		font-weight: 700;
+		text-transform: uppercase;
+	}
 }
 
 #lets-talk {
 	background: url('../img/lets-talk.jpg') center center no-repeat;
 	background-size: cover;
+	.panel {
+		background: #fff!important;
+		h2 .yellow {
+			padding-left: 1em;
+		}
+	}
 }
 
 #family {
@@ -630,7 +700,8 @@ a {
 form {
 	font-family: 'ArcherBold';
 	input,
-	select {
+	select,
+	textarea {
 		background: #fff;
 		border: none;
 		height: 2.25em;
@@ -645,7 +716,7 @@ form {
 		font-family: 'ArcherBold';
 		&:not([type="submit"]) {
 			display: block;
-			box-shadow: inset .3vw .3vw .3vw rgba(0,0,0, .3);
+			box-shadow: inset .2vw .2vw .5vw rgba(0,0,0, .3);
 			width: 100%;
 		}
 	}
@@ -655,6 +726,14 @@ form {
 	}
 	input[type="submit"] {
 		float: right;
+	}
+	textarea {
+		height: 5em;
+	}
+	select {
+		background: #fff url('../img/select.png') no-repeat;
+		background-size: 5% auto;
+		background-position: 97% center;
 	}
 }
 
@@ -742,11 +821,8 @@ input[type="button"],
 		padding-top: .5em;
 		font-weight: 100;
 		color: #fdba31;
+		line-height: 1em;
 		display: inline-block;
-		.thin {
-			font-family: 'garda_fillerregular';
-			font-weight: 100;
-		}
 		div {
 			padding-bottom: .25em;
 		}
@@ -767,6 +843,19 @@ input[type="button"],
 		color: #fdba31;
 		font-size: 1.8em;
 	}
+}
+
+.thin {
+	font-family: 'garda_fillerregular';
+	font-weight: 100;
+}
+
+.white {
+	color: #fff;
+}
+
+.yellow {
+	color: #fdba31;
 }
 
 #manefesto {
