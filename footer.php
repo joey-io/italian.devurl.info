@@ -68,6 +68,14 @@
 		<!-- scripts -->
 		<script src="js/jquery.js"></script>
 		<script src="js/scripts.js"></script>
+
+		<script type="text/javascript">
+			jQuery(document).ready(function(){
+				var page = '<?php echo $page; ?>';
+				preScroll(page);
+
+			});
+		</script>
 		<!-- /scripts -->
 
 	</body>
