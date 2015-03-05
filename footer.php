@@ -7,17 +7,17 @@
 				<div>
 					<nav id="footer-menu">
 						<ul>
-							<li><a href="/">Our Food</a></li>
-							<li><a href="/">Locations</a></li>
-							<li><a href="/">Manefesto</a></li>
-							<li><a href="/">Menu</a></li>
-							<li><a href="/">Our Story</a></li>
-							<li><a href="/">Contact Us</a></li>
-							<li><a href="/">Culinary Freedom</a></li>
-							<li><a href="/">Careers</a></li>
-							<li><a href="/">Community</a></li>
-							<li><a href="/">Gift Cards</a></li>
-							<li><a href="/">Press</a></li>
+							<li><a href="/" data-index="2">Our Food</a></li>
+							<li><a href="/" data-index="10">Locations</a></li>
+							<li><a href="/" data-index="6">Manefesto</a></li>
+							<li><a href="/" data-index="10">Menu</a></li>
+							<li><a href="/" data-index="5">Our Story</a></li>
+							<li><a href="/" data-index="11">Contact Us</a></li>
+							<li><a href="/" data-index="7">Culinary Freedom</a></li>
+							<li><a href="/" data-index="12">Careers</a></li>
+							<li><a href="/" data-index="8">Community</a></li>
+							<li><a href="/" data-index="13">Gift Cards</a></li>
+							<li><a href="/" data-index="9">Press</a></li>
 						</ul>
 					</nav>
 				</div>
@@ -67,13 +67,14 @@
 
 		<!-- scripts -->
 		<script src="js/jquery.js"></script>
+		<script src="js/mousewheel.js"></script>
+		<script src="js/underscore.js"></script>
 		<script src="js/scripts.js"></script>
 
 		<script type="text/javascript">
 			jQuery(document).ready(function(){
 				var page = '<?php echo $page; ?>';
 				preScroll(page);
-
 			});
 		</script>
 		<!-- /scripts -->

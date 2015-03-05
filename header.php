@@ -36,7 +36,7 @@
 		<script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
 		<![endif]-->
 	</head>
-	<body>
+	<body data-page="1">
 
 		<header id="header">
 			<div>

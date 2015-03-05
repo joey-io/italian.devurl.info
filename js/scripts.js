@@ -1,27 +1,7 @@
 $(document).ready(function(){
 
-    var height = ($('.slide').length+1)*$(window).height();
-    var top =  $(window).scrollTop();
-    var dir = 'up';
+   //$('body').height($(window).height()*$('.slide').length);
 
-    $('body,html').height(height);
-
-    $(window).scroll(function(){
-
-        nt = $(window).scrollTop();
-
-        if ( nt < 0 ) { nt = 0; }
-
-        if ( nt > top ) {
-            dir = 'down';
-        } else {
-            dir = 'up';
-        }
-
-        scroll(dir, nt);
-        top = nt;
-
-    });
 
     $('#footer .handle').click(function(e){
         e.preventDefault();
@@ -34,84 +14,111 @@ $(document).ready(function(){
         preScroll(page);
     })
 
+
+
+
+    $(window).mousewheel(_.debounce(function(event, delta, deltaY){
+        event.preventDefault();
+
+        if ( delta < 0 ) {
+            scroll('down');
+        } else {
+            scroll('up');
+        }
+
+    }, 100 ));
+
+    $('#footer-menu a').click(function(e){
+        e.preventDefault();
+        $('body').attr('data-page', $(this).attr('data-index'));
+        scroll('force');
+        $('#footer').removeClass('shown');
+    })
+
+    $('.arrow a').click(function(e){
+        e.preventDefault();
+        scroll('down');
+    });
+
+    $('.panel').each(function(){
+        if ( $(this).find('>div').height() > $(this).height()*.7 ) {
+            $(this).addClass('extended');
+        }
+    })
+
+    $('.showmore').click(function(){
+        $(this).parents('.panel').toggleClass('shownmore');
+    })
+
 });
 
 
-function scroll(dir, nt, index) {
+function scroll(dir) {
 
-    nt = nt;
-    var height = $(window).height();
+    var nt = parseInt($('body').attr('data-page'));
+    var tab_index = parseInt(nt)+1;
 
-    // Keep positive
-    if ( nt <= 0 ) { nt = 0; }
+    if ( dir == 'up' ) { tab_index = parseInt(nt)-1; }
+    if ( dir == 'force' ) { tab_index = parseInt(nt); }
+    if ( nt < 1 ) { nt = 1; }
+    if ( tab_index < 1 ) { tab_index = 1; }
+    if ( nt > 13 ) { nt = 13; }
+    if ( tab_index > 13 ) { tab_index = 13; }
 
-    var tab_index = Math.floor(nt/height)+1;
 
-    console.log(tab_index);
-    console.log(dir);
+    console.log(nt + ':' + dir);
 
     // If scrolling down
     if ( dir == 'down' ) {
 
-        //tab_index = parseInt($('.slide.on-stage').attr('tab-index'))+1;
         $('.slide[tab-index="'+tab_index+'"]').prev().removeClass('on-stage');
         $('.slide[tab-index="'+tab_index+'"]').prev().addClass('off-stage');
         $('.slide[tab-index="'+tab_index+'"]').addClass('on-stage');
 
     // Scrolling up
-    } else {
-
-        //tab_index = $('.slide.on-stage').attr('tab-index')-1;
+    } else if ( dir == 'up' ) {
 
         $('.slide[tab-index="'+tab_index+'"] ~ .slide').removeClass('on-stage');
         $('.slide[tab-index="'+tab_index+'"] ~ .slide').removeClass('off-stage');
-        $('.slide[tab-index="'+tab_index+'"]').addClass('on-stage');
         $('.slide[tab-index="'+tab_index+'"]').removeClass('off-stage');
+        $('.slide[tab-index="'+tab_index+'"]').addClass('on-stage');
+
+    } else {
+
+        $('.slide').removeClass('on-stage');
+        $('.slide').removeClass('off-stage');
+        $('.slide[tab-index="'+tab_index+'"]').addClass('on-stage');
 
     }
 
+    $('body').attr('data-page', tab_index);
 
-    doChange(tab_index);
+    doChange();
 
 }
 
-function doChange(tab_index){
+function doChange(){
+    var tab_index = $('body').attr('data-page');
     var active = $('.slide[tab-index="'+tab_index+'"]');
     var menu = active.attr('data-menu');
     var url = active.attr('data-url');
-
-    console.log(url);
 
     // Main menu
     $('#main-menu a').removeClass('active');
     $('#main-menu a[href="'+url+'"]').addClass('active');
 
     // Set it
-    document.title = menu + ' | SPOLETO - My Italian Kitchen';
-
     if ( window.location.pathname != url ) {
+        document.title = menu + ' | SPOLETO - My Italian Kitchen';
         window.history.pushState('object or string', menu, url);
     }
 
 }
 
 function preScroll(page){
-    var nt = (jQuery('.slide[data-url="/'+page+'"]:first').attr('tab-index')-1)*jQuery(window).height();
-    var dir = 'down';
-    if ( jQuery('.slide[data-url="/'+page+'"]:first').attr('tab-index') > $('body').attr('data-page') ) {
-        dir = 'down';
-    } else {
-        dir = 'up';
-    }
+    var tab_index = jQuery('.slide[data-url="/'+page+'"]:first').attr('tab-index');
 
-    $('body').attr('data-page', jQuery('.slide[data-url="/'+page+'"]').attr('tab-index'));
+    $('body').attr('data-page', tab_index);
 
-    console.log(page);
-
-    $('html, body').stop().animate({
-        'scrollTop' : nt
-    }, 1, function(){
-        scroll(dir, nt-jQuery(window).height()*2);
-    });
-
+    scroll('force');
 }

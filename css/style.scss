@@ -16,16 +16,40 @@ body {
 	-moz-transform: translate(0px, 0px);
 	-o-transform: translate(0px, 0px);
 	-ms-transform: translate(0px, 0px);
-	transition: all .3s ease;
-	-webkit-transition: all .3s ease;
-	-moz-transition: all .3s ease;
-	-o-transition: all .3s ease;
+	transition: all .8s ease;
+	-webkit-transition: all .8s ease;
+	-moz-transition: all .8s ease;
+	-o-transition: all .8s ease;
 	position: fixed;
 	top: 0;
 	left: 0;
 	right: 0;
 	bottom: 0;
 	overflow: hidden;
+	.arrow {
+		display: none;
+		a {
+			text-decoration: none;
+		}
+	}
+	&.last.on-stage {
+		.arrow {
+			display: block;
+			position: absolute;
+			bottom: -.5em;
+			left: 0;
+			width: 100%;
+			text-align: center;
+			img {
+				width: 4em;
+			}
+		}
+	}
+	&.last {
+		.carousel {
+			display: none!important;
+		}
+	}
 }
 
 /* offstage */
@@ -423,7 +447,7 @@ a {
 		display: block;
 		text-align: center;
 	}
-	> div {
+	> div.group {
 		position: absolute;
 		width: 100%;
 		top: 50%;
@@ -485,6 +509,11 @@ a {
 	}
 }
 
+
+.showmore {
+	display: none;
+}
+
 #lets-talk {
 	background: url('../img/lets-talk.jpg') center center no-repeat;
 	background-size: cover;
@@ -507,6 +536,11 @@ a {
 }
 
 
+a img {
+	border: none;
+}
+
+a { border: none; }
 
 
 /* animations */
@@ -514,18 +548,17 @@ a {
 .from-right,
 .from-left,
 .noodle, #footer {
-	transition: all .5s ease;
-	-webkit-transition: all .5s ease;
-	-moz-transition: all .5s ease;
-	-o-transition: all .5s ease;
+	transition: all 1s ease;
+	-webkit-transition: all 1s ease;
+	-moz-transition: all 1s ease;
+	-o-transition: all 1s ease;
 }
 
 .delayed {
-	-webkit-transition-delay: .5s;
-    transition-delay: .5s;
+	-webkit-transition-delay: .1s;
+    transition-delay: .1s;
 }
 
-.fade-in { opacity: 0; }
 
 .from-right {
 	transform: translate(100%, 0px);
@@ -567,6 +600,11 @@ a {
 	height: 12em;
 	background: url('../img/noodle.png') 0 0 repeat-x;
 	background-size: auto 100%;
+	display: none;
+}
+
+.on-stage .noodle {
+	display: block;
 }
 
 #footer {
@@ -766,7 +804,8 @@ form {
 
 input[type="submit"],
 input[type="button"],
-.button {
+.button,
+.showmore {
 	background: #fff;
 	border: none;
 	height: 2.25em;
@@ -785,6 +824,12 @@ input[type="button"],
 		background: #fdba31;
 		color: #000;
 	}
+}
+
+.showmore {
+	background: #fdba31;
+	color: #000;
+	height: auto;
 }
 
 #copy a {
@@ -844,6 +889,46 @@ input[type="button"],
 	}
 }
 
+.extended, .extended.noodles {
+	width: 70%;
+	margin-left: -35%;
+	> div {
+		width: 50%;
+		float: right;
+	}
+	.readmore {
+		display: block;
+		width: 50%;
+		position: absolute;
+		left: 0;
+		top: 0;
+		padding: 3em;
+		padding-top: 7em;
+		box-sizing: border-box;
+		-webkit-box-sizing: border-box;
+		-ms-box-sizing: border-box;
+		-moz-box-sizing: border-box;
+	}
+	.showmore {
+		display: inline-block;
+	}
+	&.shownmore {
+		margin-right: 0!important;
+		margin-left: 0!important;
+	}
+	&.panel-right {
+		margin-right: -35%;
+		margin-left: 0;
+		> div {
+			float: none;
+		}
+		.readmore {
+			left: auto;
+			right: 0;
+		}
+	}
+}
+
 .thin {
 	font-family: 'garda_fillerregular';
 	font-weight: 100;
@@ -861,18 +946,19 @@ input[type="button"],
 	position: absolute;
 	top: 5em;
 	right: 5em;
-	width: 40%;
+	max-width: 40%;
+	max-height: 80vh;
 }
 
 #freedom {
 	position: absolute;
 	top: 7em;
 	left: 5em;
-	width: 30%;
+	max-width: 50%;
 	position: absolute;
 	top: 8em;
 	left: 3em;
-	width: 50%;
+	max-height: 70vh;
 }
 
 #community-logos-1 {
@@ -935,6 +1021,34 @@ input[type="button"],
 		}
 		.title {
 			font-family: 'garda_emptyregular';
+		}
+	}
+}
+
+.carousel {
+	position: absolute;
+	bottom: 1em;
+	width: 100%;
+	text-align: center;
+	ul {
+		list-style: none;
+		margin: 0;
+		padding: 0;
+		li {
+			display: inline-block;
+			margin: 0 .25em;
+			a {
+				display: block;
+				text-indent: -500em;
+				width: 1em;
+				height: 1em;
+				background: #fff;
+				border-radius: 500em;
+				border: 2px solid #fff;
+				&.active {
+					background: #ffcb04;
+				}
+			}
 		}
 	}
 }
