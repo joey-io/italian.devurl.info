@@ -122,3 +122,27 @@ function preScroll(page){
 
     scroll('force');
 }
+
+
+$(document).keydown(function(e) {
+    switch(e.which) {
+        case 37: // left
+            scroll('up');
+            break;
+
+        case 38: // up
+            scroll('up');
+            break;
+
+        case 39: // right
+            scroll('down');
+            break;
+
+        case 40: // down
+            scroll('down');
+            break;
+
+        default: return; // exit this handler for other keys
+    }
+    e.preventDefault(); // prevent the default action (scroll / move caret)
+});

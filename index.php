@@ -6,9 +6,10 @@
 		<h2>
 			<span class="from-left">
 				Craft Your
+				<img id="home-1-graphic-c" src="img/home-1-graphic-c.png" />
 			</span>
 			<span class="from-right">
-				Culinary Freedom!
+				Culinary Freedom! <img id="home-1-graphic-d" src="img/home-1-graphic-d.png" />
 			</span>
 		</h2>
 		<h3 class="fade-in delayed">
@@ -42,6 +43,9 @@
 			<li><a href="scroll('down')" data-index="4">3</a></li>
 		</ul>
 	</div>
+	<div class="arrow arrow-right">
+		<a href="#"><img src="img/n-right.png" /></a>
+	</div>
 </div>
 <div id="home-3" class="slide offstage-right" tab-index="3" data-menu="Our Food" data-url="/our-food.php">
 	<div class="noodle from-left"></div>
@@ -69,6 +73,9 @@
 			<li><a href="#" data-index="3" class="active">2</a></li>
 			<li><a href="scroll('down')" data-index="4">3</a></li>
 		</ul>
+	</div>
+	<div class="arrow arrow-right">
+		<a href="#"><img src="img/n-right.png" /></a>
 	</div>
 </div>
 <div id="home-4" class="slide offstage-right last" tab-index="4" data-menu="Our Food" data-url="/our-food.php">
@@ -100,6 +107,7 @@
 </div>
 
 <div id="ourstory-1" class="slide offstage-bottom first" tab-index="5" data-menu="Our Story" data-url="/our-story.php">
+<div class="noodle from-left fade-in delayed"></div>
 	<div class="panel panel-right from-right">
 		<div>
 			<h2>Our Story</h2>
@@ -107,10 +115,11 @@
 
 			<p>A choice of 30 authentic Italian-inspired toppings gives everyone a chance to create meals that inspire their palate. Guests can craft a pasta dish, flatbread or salad and interact, talk and laugh with our chefs to experiment with a variety of fresh ingredients in our open kitchen. You can choose to indulge in richer ingredients
 			like meats and cheeses, as well as a full complement of fresh vegetables, whole grains and fruits.</p>
+
+			<p>Spoleto has made it our mission to use ingredients in their simplest, most natural form, depending on daily deliveries of seasonal produce from locally owned farms. Spoleto sources produce that is nutrient-rich and organic when possible.</p>
 			<a href="#" class="showmore">Read More</a>
 			<div class="readmore">
-				<p>Spoleto has made it our mission to use ingredients in their simplest, most natural form, depending on daily deliveries of seasonal produce from locally owned farms. Spoleto sources produce that is nutrient-rich and organic when possible.
-				This is a practice we have embraced since Spoleto was founded, long before “farm to table” became a trendy buzzword. </p>
+				<p>This is a practice we have embraced since Spoleto was founded, long before “farm to table” became a trendy buzzword. </p>
 
 				<p>The limitless possibilities of combinations allow our guests to have a unique interactive experience during every visit to Spoleto. For the indecisive guest, you can also select from one
 				of our chef-inspired pasta, flatbread and salad recipes. We care about what you like. We also care about giving you fresh, flavorful and healthy options.</p>
@@ -128,10 +137,13 @@
 			<li><a href="#" data-index="9">5</a></li>
 		</ul>
 	</div>
+	<div class="arrow arrow-right">
+		<a href="#"><img src="img/n-right.png" /></a>
+	</div>
 </div>
 <div id="ourstory-2" class="slide offstage-right" tab-index="6" data-menu="Our Story" data-url="/our-story.php">
 	<img id="manefesto" class="from-right" src="img/manefesto.png" />
-	<div class="panel from-left">
+	<div class="panel from-left noodles">
 		<div>
 			<h2 class="underline">Brand Inspiration</h2>
 			<p>To bring <em>Italian Culinary Freedom</em> to the world.</p>
@@ -166,6 +178,9 @@
 			<li><a href="#" data-index="9">5</a></li>
 		</ul>
 	</div>
+	<div class="arrow arrow-right">
+		<a href="#"><img src="img/n-right.png" /></a>
+	</div>
 </div>
 <div id="ourstory-3" class="slide offstage-right" tab-index="7" data-menu="Our Story" data-url="/our-story.php">
 	<img id="freedom" src="img/ourstory-3-graphic.png" class="from-left fade-in" />
@@ -189,6 +204,9 @@
 			<li><a href="#" data-index="8">4</a></li>
 			<li><a href="#" data-index="9">5</a></li>
 		</ul>
+	</div>
+	<div class="arrow arrow-right">
+		<a href="#"><img src="img/n-right.png" /></a>
 	</div>
 </div>
 <div id="ourstory-4" class="slide offstage-right" tab-index="8" data-menu="Our Story" data-url="/our-story.php">
@@ -216,6 +234,9 @@
 			<li><a href="#" data-index="8" class="active">4</a></li>
 			<li><a href="#" data-index="9">5</a></li>
 		</ul>
+	</div>
+	<div class="arrow arrow-right">
+		<a href="#"><img src="img/n-right.png" /></a>
 	</div>
 </div>
 <div id="ourstory-5" class="slide offstage-right last" tab-index="9" data-menu="Our Story" data-url="/our-story.php">
@@ -248,6 +269,8 @@
 					<div class="title">Title of Article</div>
 					<div class="date">Date</div>
 				</div>
+				<a href="#" class="press-arrow left"></a>
+				<a href="#" class="press-arrow right"></a>
 			</div>
 		</div>
 	</div>
@@ -378,7 +401,8 @@
 </div>
 
 <div id="gift-card" class="slide offstage-bottom first last" tab-index="13" data-menu="Gift Cards" data-url="/gift-cards.php">
-	<div class="panel panel-right from-right noodles">
+	<div class="noodle from-left fade-in delayed"></div>
+	<div class="panel panel-right from-right">
 		<div>
 			<h2>
 				<div class="black">Share<br/>the<em class="yellow">Amore</em></div>

@@ -1,4 +1,12 @@
 		<footer id="footer">
+			<div id="social-icons">
+				<ul>
+					<li><a href="/"><i class="fa fa-facebook"></i></a></li>
+					<li><a href="/"><i class="fa fa-twitter"></i></a></li>
+					<li><a href="/"><i class="fa fa-instagram"></i></a></li>
+					<li><a href="/"><i class="fa fa-pinterest"></i></a></li>
+				</ul>
+			</div>
 			<a href="#" class="handle">
 				<span>Back Of the House</span>
 				<img src="img/dwn.png" />
