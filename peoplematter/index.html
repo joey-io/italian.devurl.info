@@ -1,0 +1,67 @@
+
+
+<!DOCTYPE html>
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<title>Tabs</title>
+    <link rel="stylesheet" type="text/css" href="peoplematter/bootstrap.css" />
+    <link rel="stylesheet" type="text/css" href="peoplematter/peoplematter.css" />
+
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans+Condensed:300,300italic,700' rel='stylesheet' type='text/css'>
+	<!--[if IE 6]>
+	<script src="png/png-fix.js" type="text/javascript"></script>
+	<script src="png/png.js" type="text/javascript"></script>
+	<![endif]-->
+
+    <script src="peoplematter/jquery-2.1.1.min.js"></script>
+    <script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.10.1/jquery-ui.min.js"></script>
+    <script src="peoplematter/bootstrap.min.js"></script>
+    <script src="peoplematter/peoplematter-alljobs.js"></script>    
+</head>
+<body>
+    <header id="header">
+        <div>
+            <div>
+                <a id="logo" href="/" alt="Spoleto">
+                    <img src="http://italian.devurl.info/img/logo.png">
+                </a>
+            </div>
+            <div>
+                <nav id="main-menu">
+                    <ul>
+                        <li><a href="http://italian.devurl.info/our-food.php">Our Food</a></li>
+                        <li><a href="http://italian.devurl.info/our-story.php">Our Story</a></li>
+                        <li><a href="http://italian.devurl.info/locations-and-menu.php">Locations &amp; Menu</a></li>
+                        <li><a href="http://italian.devurl.info/contact-us.php">Let's Talk</a></li>
+                        <li><a href="http://italian.devurl.info/careers.php">Join Our Family</a></li>
+                        <li><a href="http://italian.devurl.info/gift-cards.php">Gift Cards</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </header>
+    
+    <div id="wrapper">                  
+		<div class="location">
+        	<ul>         
+                <li class="nav-1 alt-nav">
+                    <h2>Business Locations for Spoleto</h2>
+                    <hr />
+                </li>
+
+                <li id="loading"><h2 style="text-align: center;">Please Wait.  Loading Available Job Positions.....</h2></li>
+
+                <div id="all-locations" style="display:none;">
+                </div>              
+            </ul>
+        </div> 
+        <br clear="all" />
+	</div>
+
+<script>
+    getAllLocations(sAlias);
+</script>
+
+</body>
+</html>

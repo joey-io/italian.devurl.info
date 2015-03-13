@@ -917,7 +917,7 @@ input[type="button"],
 	&.panel-right {
 		left: auto;
 		right: 0;
-		padding-top: 3em;
+		padding-top: 3sem;
 		&.noodles {
 			width: 35%;
 			background: #fff url('../img/noodle-f.png') bottom left no-repeat;
@@ -1146,15 +1146,4 @@ input[type="button"],
 			}
 		}
 	}
-}
-
-#home-1-graphic-c {
-	height: .75em;
-	display: inline-block;
-}
-
-#home-1-graphic-d {
-	display: inline-block;
-	margin-top: -.35em;
-	height: 1.25em;
 }

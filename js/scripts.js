@@ -2,6 +2,7 @@ $(document).ready(function(){
 
    //$('body').height($(window).height()*$('.slide').length);
 
+   tooShort();
 
     $('#footer .handle').click(function(e){
         e.preventDefault();
@@ -52,6 +53,19 @@ $(document).ready(function(){
 
 });
 
+
+$(window).resize(function(){
+    tooShort();
+});
+
+
+function tooShort(){
+    if ( jQuery(window).height() < jQuery(window).width()*.5 ) {
+        jQuery('body').addClass('too-short');
+    } else {
+        jQuery('body').removeClass('too-short');
+    }
+}
 
 function scroll(dir) {
 
